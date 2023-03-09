@@ -1,4 +1,4 @@
-## jsontojsx v1.0.1
+## jsontojsx v1.0.2
 
 This library convert JSON to JSX Element.
 
