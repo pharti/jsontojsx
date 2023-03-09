@@ -1,6 +1,6 @@
 {
   "name": "jsontojsx",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Converts JSON Object to JSK Element",
   "main": "index.js",
   "scripts": {
