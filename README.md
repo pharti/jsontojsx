@@ -75,4 +75,6 @@ const testConfig = {
 };
 ```
 
-# jsontojsx
+## Output
+
+# <img src="https://raw.githubusercontent.com/pharti/jsontojsx/main/example.png" alt="Example output">
