@@ -1,4 +1,4 @@
-## jsontojsx v1.0.4
+## jsontojsx v1.0.6
 
 This library convert JSON to JSX Element.
 
@@ -105,7 +105,6 @@ Type p
 ```
 
 Type a
-
 ```sh
 {
   type: 'a',
@@ -115,3 +114,34 @@ Type a
   value: 'Hyperlink',
 }
 ```
+
+Type Image
+```sh
+{
+ type: 'img',
+ id: '<Tag id>',
+ class: '<Tag class name>',
+ src: 'https://wallpaperaccess.com/full/317501.jpg',
+ alt: "<Alt image desc>",
+}
+```
+
+Type Button
+```sh
+{
+ type: 'button',
+ buttonText: 'Submit',
+ attributes: { marginTop: 8 },
+ onPress: () => foo(),
+},
+```
+
+Type Input
+```sh
+{
+  type: 'input',
+  onTextChange: (value) => console.log(value),
+}
+```
+
+
