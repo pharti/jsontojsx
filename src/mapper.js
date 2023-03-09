@@ -12,7 +12,9 @@ import {
     Modal,
     Stack,
     Text,
-    VStack
+    VStack,
+    Checkbox,
+    Radio
 } from 'native-base';
 
 //... Maps native base component to common HTML tags
@@ -128,6 +130,9 @@ export const ComponentToCommonTagsMap = {
     avatar: Avatar,
     icon: Icon,
     modal: Modal,
+    checkBox: Checkbox,
+    radio: Radio,
+    radioGroup: Radio.Group,
     //...Stack compoments
     HStack: HStack,
     VStack: VStack,

@@ -1,15 +1,19 @@
 /* eslint-disable prettier/prettier */
-export const getCheckBoxConfig = (config) => {
 
-    const defaultCheckBoxConfig = {
+export const getRadioGroupConfig = (config) => {
+
+    const defaultRadioGroupConfig = {
         type: 'Element',
-        tagName: 'checkBox',
+        tagName: 'radioGroup',
         attributes: {
-            value: `${config.value}`,
+            size: 'md',
+            defaultValue: '1',
+            onChange: (value) => config.onPress(value),
             isDisabled: config.isDisabled ? true : false,
         },
         children: config.children && config.children.length > 0 ? [...config.children] : []
     };
+
     //... config parameter is used when the default configuration are needed to override
-    return defaultCheckBoxConfig;
+    return defaultRadioGroupConfig;
 }

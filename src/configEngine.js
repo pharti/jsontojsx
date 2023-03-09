@@ -16,6 +16,8 @@ import { getIconConfig } from "./htmlComponents/icon";
 import { getImgConfig } from "./htmlComponents/img";
 import { getInputConfig } from "./htmlComponents/input";
 import { getPConfig } from "./htmlComponents/p";
+import { getRadioConfig } from "./htmlComponents/radio";
+import { getRadioGroupConfig } from "./htmlComponents/radioGroup";
 import { getSectionConfig } from "./htmlComponents/section";
 import { getSpanConfig } from "./htmlComponents/span";
 import { getStrongConfig } from "./htmlComponents/strong";
@@ -101,11 +103,18 @@ export const configEngine = (config) => {
             case 'input':
                 updatedConfig = getInputConfig(config);
                 break;
-            case 'checkbox':
-                updatedConfig = getCheckBoxConfig(config);
-                break;
             case 'button':
                 updatedConfig = getButtonConfig(config);
+                break;
+            case 'checkBox':
+                updatedConfig = getCheckBoxConfig(config);
+                break;
+            case 'radio':
+                updatedConfig = getRadioConfig(config);
+                break;
+            case 'radioGroup':
+                updatedConfig = getRadioGroupConfig(config);
+                break;
             default:
                 return updatedConfig;
         }

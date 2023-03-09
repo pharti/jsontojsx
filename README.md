@@ -1,4 +1,4 @@
-## jsontojsx v1.0.6
+## jsontojsx v1.0.7
 
 This library convert JSON to JSX Element.
 
@@ -144,4 +144,64 @@ Type Input
 }
 ```
 
+Type Radio
+```sh
+{
+  type: 'radio',
+  value: 1,
+  children: [
+      {
+          type: 'Element',
+          tagName: 'p',
+          children: [
+            {
+              type: 'Text',
+              content: '<Title>',
+            },
+          ],
+      },
+  ]
+}
+```
 
+Type Radio Group
+```sh
+  {
+      type: 'radioGroup',
+      onPress: (value) => console.log(value),
+      children: [
+          {
+            type: 'radioButton',
+            value: 1,
+            children: [
+              {
+                  type: 'Element',
+                  tagName: 'p',
+                  attributes: {},
+                  children: [
+                    {
+                        type: 'Text',
+                        content: 'Radio 1',
+                    },
+                  ],
+              },
+            ]
+          },
+          {
+            type: 'radioButton',
+            value: 2,
+            children: [
+            {
+              type: 'Element',
+              tagName: 'p',
+              attributes: {},
+              children: [
+                {
+                    type: 'Text',
+                    content: 'Radio 2',
+                },
+              ],
+            },]   
+          },]
+  }
+```
