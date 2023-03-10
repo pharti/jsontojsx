@@ -1,11 +1,15 @@
 {
   "name": "jsontojsx",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Converts JSON Object to JSK Element",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pharti/jsontojsx.git"
+  }
 }
