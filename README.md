@@ -144,64 +144,44 @@ Type Input
 }
 ```
 
-Type Radio
-```sh
-{
-  type: 'radio',
-  value: 1,
-  children: [
-      {
-          type: 'Element',
-          tagName: 'p',
-          children: [
-            {
-              type: 'Text',
-              content: '<Title>',
-            },
-          ],
-      },
-  ]
-}
-```
-
 Type Radio Group
 ```sh
   {
-      type: 'radioGroup',
-      onPress: (value) => console.log(value),
-      children: [
+        type: 'radioGroup',
+        onPress: (value) => console.log(value),
+        children: [
           {
-            type: 'radioButton',
+            type: 'radio',
             value: 1,
             children: [
               {
-                  type: 'Element',
-                  tagName: 'p',
-                  attributes: {},
-                  children: [
-                    {
-                        type: 'Text',
-                        content: 'Radio 1',
-                    },
-                  ],
+                type: 'Element',
+                tagName: 'p',
+                attributes: {},
+                children: [
+                  {
+                    type: 'Text',
+                    content: 'Radio 1',
+                  },
+                ],
               },
             ]
           },
           {
-            type: 'radioButton',
+            type: 'radio',
             value: 2,
             children: [
-            {
-              type: 'Element',
-              tagName: 'p',
-              attributes: {},
-              children: [
-                {
+              {
+                type: 'Element',
+                tagName: 'p',
+                attributes: {},
+                children: [
+                  {
                     type: 'Text',
                     content: 'Radio 2',
-                },
-              ],
-            },]   
+                  },
+                ],
+              },]
           },]
-  }
+      }
 ```
