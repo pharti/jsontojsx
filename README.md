@@ -1,4 +1,4 @@
-## jsontojsx v1.0.8
+## jsontojsx v1.0.10
 
 This library convert JSON to JSX Element.
 
@@ -184,4 +184,18 @@ Type Radio Group
               },]
           },]
       }
+```
+
+Type Checkbox
+```sh
+{
+  type: 'checkBox',
+  attributes: {
+    value: 'Hello',
+  },
+  children: [{
+    type: 'Text',
+    content: 'CheckBox'
+  }]
+}
 ```

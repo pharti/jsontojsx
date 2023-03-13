@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export const getCheckBoxConfig = (config) => {
+export const checkBoxGenerator = (config) => {
 
     const defaultCheckBoxConfig = {
         type: 'Element',
