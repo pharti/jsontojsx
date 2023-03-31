@@ -1,7 +1,7 @@
+/* eslint-disable prettier/prettier */
 import {
     Avatar,
     Box,
-    Button,
     FormControl,
     Heading,
     HStack,
@@ -14,11 +14,13 @@ import {
     Text,
     VStack,
     Checkbox,
-    Radio
+    Radio,
+    Button,
 } from 'native-base';
+import { Pressable } from 'react-native';
 
 //... Maps native base component to common HTML tags
-export const ComponentToCommonTagsMap = {
+export const ConfigToComponentForWeb = {
     //... Page tags
     // html
     // head
@@ -26,15 +28,15 @@ export const ComponentToCommonTagsMap = {
     // link
     // meta
     // base
-    // script 
-    // style 
-    // title 
+    // script
+    // style
+    // title
 
     //...Layout tags
     header: Box,
     // main
     footer: Box,
-    // nav 
+    // nav
     article: Box,
     // aside
     div: Box,
@@ -48,22 +50,22 @@ export const ComponentToCommonTagsMap = {
     // thead
     // tbody
     // tfoot
-    // tr 
-    // th 
-    // td 
+    // tr
+    // th
+    // td
 
     //... Form tags
     form: FormControl,
     input: Input,
-    // label 
-    // textarea 
-    // select 
-    // button 
-    // datalist 
-    // fieldset 
-    // legend 
+    // label
+    // textarea
+    // select
+    // button
+    // datalist
+    // fieldset
+    // legend
 
-    //...Text tags   
+    //...Text tags
     p: Text,
     h1: Text,
     h2: Text,
@@ -87,12 +89,12 @@ export const ComponentToCommonTagsMap = {
     //wbr
 
     //... List tag
-    // ul 
-    // ol 
-    // li 
-    // dl 
-    // dt 
-    // dd 
+    // ul
+    // ol
+    // li
+    // dl
+    // dt
+    // dd
 
     //...Media tags
     //audio
@@ -131,6 +133,7 @@ export const ComponentToCommonTagsMap = {
     icon: Icon,
     modal: Modal,
     checkBox: Checkbox,
+    touchable: Pressable,
     radio: Radio,
     radioGroup: Radio.Group,
     //...Stack compoments
@@ -139,30 +142,4 @@ export const ComponentToCommonTagsMap = {
     stack: Stack,
     //... Composite Components
     card: Box,
-};
-
-//... Maps native base font size standards to HTML tags
-export const ComponentToFontSizeMap = {
-    small: 'xs',
-    caption: 'sm',
-    p: 'md',
-    h1: '6xl',
-    h2: '5xl',
-    h3: '4xl',
-    h4: '3xl',
-    h5: '2xl',
-    h6: 'xl',
-    time: 'sm'
-};
-
-//... Maps native base font style standards to HTML tags
-export const ComponentToFontStyleMap = {
-    i: 'italic',
-    em: 'italic'
-};
-
-//... Maps native base font weight standards to HTML tags
-export const ComponentToFontWeightMap = {
-    b: 'bold',
-    strong: 'bold',
 };

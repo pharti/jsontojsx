@@ -1,8 +1,7 @@
-import { ComponentToFontSizeMap } from "../mapper";
-
+/* eslint-disable prettier/prettier */
 export const getIconConfig = (config) => {
     try {
-        //... config parameter is used when the default configuration are needed to override 
+        //... config parameter is used when the default configuration are needed to override
         let defaultIconConfig = {
             type: 'Element',
             tagName: 'i',
@@ -27,9 +26,8 @@ export const getIconConfig = (config) => {
         //         defaultIconConfig[key] = config[key];
         //     }
         // });
-        console.log("defaultIconConfig", defaultIconConfig);
         return defaultIconConfig;
     } catch (error) {
-        console.log("Error: getPConfig", error);
+        console.log('Error: getPConfig', error);
     }
 };

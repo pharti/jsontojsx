@@ -1,12 +1,13 @@
+/* eslint-disable prettier/prettier */
 export const getLinkConfig = (config) => {
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultDivConfig = {
         type: 'Element',
         tagName: 'a',
         attributes: {
-            href: `${config.href ? config.href : "#"}`,
+            href: `${config.href ? config.href : '#'}`,
         },
-        children: config?.children && config?.children.length > 0 ? [...config?.children] : []
+        children: config?.children && config?.children.length > 0 ? [...config?.children] : [],
     };
 
     Object.keys(config).forEach((key, index) => {
@@ -19,4 +20,4 @@ export const getLinkConfig = (config) => {
     });
 
     return defaultDivConfig;
-}
+};

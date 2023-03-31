@@ -1,14 +1,15 @@
-import { ComponentToFontSizeMap } from "../mapper";
+/* eslint-disable prettier/prettier */
+import { ComponentToFontSizeMap } from '../mapper/fontStyleMapper';
 
 export const getTimeConfig = (config) => {
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultTimeConfig = {
         type: 'Element',
         tagName: 'time',
         attributes: {
-            fontSize: ComponentToFontSizeMap[config.tagName]
+            fontSize: ComponentToFontSizeMap[config.tagName],
         },
-        children: config?.children && config?.children.length > 0 ? [...config?.children] : []
+        children: config?.children && config?.children.length > 0 ? [...config?.children] : [],
     };
 
     Object.keys(config).forEach((key, index) => {
@@ -18,11 +19,11 @@ export const getTimeConfig = (config) => {
         } else if (key === 'styles') {
             //... native base accepts style prop for styling
             //... Note styles used double braces.. But object doesn't accept double braces as value.
-            defaultTimeConfig.style = { ...config.styles }
+            defaultTimeConfig.style = { ...config.styles };
         } else {
             defaultTimeConfig[key] = config[key];
         }
     });
 
     return defaultTimeConfig;
-}
+};

@@ -1,6 +1,6 @@
+/* eslint-disable prettier/prettier */
 export const getDivConfig = (config) => {
-    console.log('config', config);
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultDivConfig = {
         type: 'Element',
         tagName: 'div',
@@ -15,13 +15,13 @@ export const getDivConfig = (config) => {
         if (key === 'attributes') {
             defaultDivConfig[key] = { ...defaultDivConfig[key], ...config[key] };
         } else if (key === 'styles') {
-            defaultDivConfig['attributes'] = { ...defaultDivConfig['attributes'], ...config[key] };
-            defaultDivConfig['style'] = { ...config[key] };
-            if ("paddingVertical" in config[key]) {
-                defaultDivConfig['attributes'].py = config[key].paddingVertical;
+            defaultDivConfig.attributes = { ...defaultDivConfig.attributes, ...config[key] };
+            defaultDivConfig.style = { ...config[key] };
+            if ('paddingVertical' in config[key]) {
+                defaultDivConfig.attributes.py = config[key].paddingVertical;
             }
-            if ("paddingHorizontal" in config[key]) {
-                defaultDivConfig['attributes'].py = config[key].paddingHorizontal;
+            if ('paddingHorizontal' in config[key]) {
+                defaultDivConfig.attributes.py = config[key].paddingHorizontal;
             }
         } else {
             defaultDivConfig[key] = config[key];
@@ -29,4 +29,4 @@ export const getDivConfig = (config) => {
     });
 
     return defaultDivConfig;
-}
+};

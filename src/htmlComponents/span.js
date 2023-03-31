@@ -1,14 +1,15 @@
-import { ComponentToFontSizeMap } from "../mapper";
+/* eslint-disable prettier/prettier */
+import { ComponentToFontSizeMap } from '../mapper/fontStyleMapper';
 
 export const getSpanConfig = (config) => {
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultSpanConfig = {
         type: 'Element',
         tagName: 'span',
         attributes: {
-            fontSize: ComponentToFontSizeMap['span']
+            fontSize: ComponentToFontSizeMap.span,
         },
-        children: config?.children && config?.children.length > 0 ? [...config?.children] : []
+        children: config?.children && config?.children.length > 0 ? [...config?.children] : [],
     };
 
 
@@ -19,7 +20,7 @@ export const getSpanConfig = (config) => {
         } else if (key === 'styles') {
             //... native base accepts style prop for styling
             //... Note styles used double braces.. But object doesn't accept double braces as value.
-            defaultSpanConfig.style = { ...config.styles }
+            defaultSpanConfig.style = { ...config.styles };
         } else {
             defaultSpanConfig[key] = config[key];
         }
@@ -27,4 +28,4 @@ export const getSpanConfig = (config) => {
 
     return defaultSpanConfig;
 
-}
+};

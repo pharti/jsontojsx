@@ -9,11 +9,11 @@ export const getRadioConfig = (config) => {
             startIcon: '',
             //... bgColor overrides the colorScheme
             isDisabled: config.isDisabled,
-            value: config.value
+            value: config.value,
         },
-        children: config.children && config.children.length > 0 ? [...config.children] : []
+        children: config.children && config.children.length > 0 ? [...config.children] : [],
     };
 
     //... config parameter is used when the default configuration are needed to override
     return defaultRadioButtonConfig;
-}
+};

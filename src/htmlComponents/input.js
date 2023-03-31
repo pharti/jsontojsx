@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 export const getInputConfig = (config) => {
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultInputConfig = {
         type: 'Element',
         tagName: 'input',
@@ -16,11 +17,11 @@ export const getInputConfig = (config) => {
         } else if (key === 'styles') {
             //... native base accepts style prop for styling
             //... Note styles used double braces.. But object doesn't accept double braces as value.
-            defaultInputConfig.style = { ...config.styles }
+            defaultInputConfig.style = { ...config.styles };
         } else {
             defaultInputConfig[key] = config[key];
         }
     });
     return defaultInputConfig;
 
-}
+};
